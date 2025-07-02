@@ -6,7 +6,6 @@ const destinations = [
     image: "/images/canada.jpg",
     offers: ["Études", "Immigration", "Tourisme"]
   },
-  // ... autres destinations
 ];
 
 export const TravelAgency = () => {

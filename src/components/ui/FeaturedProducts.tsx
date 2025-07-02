@@ -1,7 +1,5 @@
 import { ProductCard } from "./ProductCard";
 import { Link } from "react-router-dom";
-
-// Define the Product interface locally if not already defined globally or imported
 interface Product {
   id: string;
   title: string;
@@ -13,21 +11,18 @@ interface Product {
   location: string;
   isDigital?: boolean;
   isPromo?: boolean;
-  category?: string; // Added category as per mockProducts
+  category?: string; 
 }
 
 interface FeaturedProductsProps {
-  products: Product[]; // Now accepts products as a prop
+  products: Product[];
 }
 
 export const FeaturedProducts = ({ products }: FeaturedProductsProps) => {
-  // Removed isLoading state and useEffect as data is passed via props
 
   return (
     <>
-      {/* The main heading and section wrapper are now handled by HomePage */}
-      {/* The content directly starts with the grid of products */}
-      {products.length === 0 ? ( // Check if products array is empty to show a message
+      {products.length === 0 ? ( 
         <div className="flex justify-center py-12 text-gray-600">
           Aucun produit vedette disponible pour le moment.
         </div>

@@ -35,7 +35,6 @@ export const DropdownMenu = ({
 
   return (
     <div
-      // className="relative"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
@@ -48,8 +47,6 @@ export const DropdownMenu = ({
           className={`transition-transform ${open ? "rotate-180" : ""}`}
         />
       </button>
-
-      {/* Mega Menu plein écran */}
       {megaMenu && (
         <div
           className={`absolute left-0 top-full mt-2 w-screen bg-white border-t border-gray-100 shadow-xl z-50 transform transition-all duration-300 ease-in-out ${
@@ -106,8 +103,6 @@ export const DropdownMenu = ({
           </div>
         </div>
       )}
-
-      {/* Menu classique */}
       {!megaMenu && (
         <div
           className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-md z-50 transition-all duration-200 ease-in-out ${

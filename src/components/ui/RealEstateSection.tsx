@@ -8,7 +8,6 @@ const properties = [
     price: "25 000 000 FCFA",
     image: "/images/property-1.jpg"
   },
-  // ... autres propriétés
 ];
 
 export const RealEstateSection = () => {

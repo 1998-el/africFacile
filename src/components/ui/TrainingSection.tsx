@@ -8,7 +8,6 @@ const trainings = [
     price: "50 000 FCFA",
     format: "En ligne"
   },
-  // ... autres formations
 ];
 
 export const TrainingSection = () => {

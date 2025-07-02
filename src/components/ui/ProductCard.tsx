@@ -45,7 +45,6 @@ export const ProductCard = ({ product, variant = 'default' }: ProductCardProps) 
       style={{ border: '1px solid #e0e0e0' }}
       aria-label={`Voir ${product.title}`}
     >
-      {/* Image container - Hauteur fixe */}
       <div className={`relative ${variant === 'compact' ? 'h-[160px]' : 'h-[200px]'} bg-gray-50`}>
         <img
           src={product.image}
@@ -54,7 +53,6 @@ export const ProductCard = ({ product, variant = 'default' }: ProductCardProps) 
           loading="lazy"
         />
 
-        {/* Badges */}
         <div className="absolute top-3 left-3 flex gap-2">
           {product.isDigital && (
             <span className="bg-blue-50 text-blue-700 text-xs px-2.5 py-0.5 rounded-full font-medium backdrop-blur-sm">
@@ -68,7 +66,6 @@ export const ProductCard = ({ product, variant = 'default' }: ProductCardProps) 
           )}
         </div>
 
-        {/* Favorite button */}
         <button
           onClick={handleFavorite}
           className="absolute top-3 right-3 p-2 bg-white/80 rounded-full shadow-sm backdrop-blur-sm hover:bg-gray-100 transition-colors duration-200"
@@ -81,7 +78,6 @@ export const ProductCard = ({ product, variant = 'default' }: ProductCardProps) 
         </button>
       </div>
 
-      {/* Product details - Contenu avec hauteur calculée */}
       <div className={`p-4 flex flex-col ${variant === 'compact' ? 'h-[200px]' : 'h-[220px]'}`}>
         <h3 className={`font-semibold text-gray-800 mb-1 leading-tight ${
           variant === 'compact' ? 'text-sm line-clamp-2' : 'text-base line-clamp-2'
@@ -89,7 +85,6 @@ export const ProductCard = ({ product, variant = 'default' }: ProductCardProps) 
           {product.title}
         </h3>
 
-        {/* Price */}
         <div className="flex items-baseline gap-2 mb-2">
           <span className="font-bold text-lg text-gray-900">
             {formatPrice(product.price)}
@@ -101,7 +96,6 @@ export const ProductCard = ({ product, variant = 'default' }: ProductCardProps) 
           )}
         </div>
 
-        {/* Rating */}
         <div className="flex items-center gap-1 mb-2">
           <div className="flex text-yellow-500">
             {[...Array(5)].map((_, i) => (
@@ -118,13 +112,11 @@ export const ProductCard = ({ product, variant = 'default' }: ProductCardProps) 
           </span>
         </div>
 
-        {/* Location */}
         <div className="flex items-center gap-1 text-xs text-gray-500 mb-3">
           <MapPin size={14} className="text-gray-400" />
           <span>{product.location}</span>
         </div>
 
-        {/* Add to cart - Positionné en bas */}
         <button
           onClick={(e) => {
             e.preventDefault();

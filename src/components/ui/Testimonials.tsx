@@ -6,7 +6,6 @@ const testimonials = [
     content: "AfricFacil m'a permis de tripler mon chiffre d'affaires en 3 mois !",
     avatar: "/images/avatar1.jpg"
   },
-  // ... autres témoignages
 ];
 
 export const Testimonials = () => {

@@ -22,7 +22,6 @@ export const CarouselHero = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
 
-  // Auto Slide
   useEffect(() => {
     if (!autoSlide) return;
     const timer = setInterval(() => {
@@ -31,7 +30,6 @@ export const CarouselHero = ({
     return () => clearInterval(timer);
   }, [autoSlide, autoSlideInterval, slides.length]);
 
-  // Mobile swipe
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStartX(e.touches[0].clientX);
   };
@@ -52,7 +50,6 @@ export const CarouselHero = ({
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Slide Images Container */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div
           className="flex h-full transition-transform duration-700 ease-in-out"
@@ -73,8 +70,6 @@ export const CarouselHero = ({
           ))}
         </div>
       </div>
-
-      {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
         <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in-stagger">
           {slides[currentIndex].title}
@@ -98,7 +93,6 @@ export const CarouselHero = ({
         </div>
       </div>
 
-      {/* Progress indicators (bottom) */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-2 z-20">
         {slides.map((_, i) => (
           <div

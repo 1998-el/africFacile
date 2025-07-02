@@ -26,21 +26,17 @@ export const MobileMenu = ({ open, onClose, productLinks, serviceLinks }: Mobile
 
   return (
     <div className="z-999">
-      {/* Overlay premium */}
       <div
         className={`fixed z-990 inset-0 bg-gray-900/70 backdrop-blur-sm z-40 transition-opacity duration-300 ${
           open ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={onClose}
       />
-
-      {/* Menu élégant */}
       <div
         className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* En-tête premium */}
         <div className="p-5 flex justify-between items-center bg-gradient-to-r from-green-600 to-green-500">
           <div className="flex items-center gap-3">
             <div className="bg-white text-green-600 p-2 rounded-lg">
@@ -57,11 +53,9 @@ export const MobileMenu = ({ open, onClose, productLinks, serviceLinks }: Mobile
           </button>
         </div>
 
-        {/* Contenu raffiné */}
         <div className="overflow-y-auto h-[calc(100%-72px)]">
           <nav className="p-4 space-y-1">
 
-            {/* Section Produits premium */}
             <div className="mb-1">
               <button
                 onClick={() => toggleSection("products")}
@@ -124,7 +118,6 @@ export const MobileMenu = ({ open, onClose, productLinks, serviceLinks }: Mobile
               )}
             </div>
 
-            {/* Section Services premium */}
             <div className="mb-1">
               <button
                 onClick={() => toggleSection("services")}
@@ -160,8 +153,6 @@ export const MobileMenu = ({ open, onClose, productLinks, serviceLinks }: Mobile
                 </div>
               )}
             </div>
-
-            {/* Autres sections premium */}
             <Link
               to="/training"
               onClick={onClose}
@@ -184,7 +175,6 @@ export const MobileMenu = ({ open, onClose, productLinks, serviceLinks }: Mobile
               <span>Voyages</span>
             </Link>
 
-            {/* Séparateur élégant */}
             <div className="relative my-3">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-100"></div>
@@ -193,8 +183,6 @@ export const MobileMenu = ({ open, onClose, productLinks, serviceLinks }: Mobile
                 <span className="px-2 bg-white text-xs text-gray-400">Compte</span>
               </div>
             </div>
-
-            {/* Section compte utilisateur premium */}
             <Link
               to="/login"
               onClick={onClose}
@@ -219,8 +207,6 @@ export const MobileMenu = ({ open, onClose, productLinks, serviceLinks }: Mobile
               </div>
               <span className="bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">3</span>
             </Link>
-
-            {/* Séparateur élégant */}
             <div className="relative my-3">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-100"></div>
@@ -230,7 +216,6 @@ export const MobileMenu = ({ open, onClose, productLinks, serviceLinks }: Mobile
               </div>
             </div>
 
-            {/* Informations de contact premium */}
             <div className="px-4 py-2 space-y-4">
               <div className="flex items-start gap-3 p-2 hover:bg-gray-50 rounded-lg transition-all">
                 <div className="bg-green-100 p-2 rounded-full mt-0.5 flex-shrink-0">

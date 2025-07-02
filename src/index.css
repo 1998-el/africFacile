@@ -3,8 +3,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Polices personnalisées (à importer via Google Fonts dans index.html) */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

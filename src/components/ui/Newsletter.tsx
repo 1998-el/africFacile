@@ -5,7 +5,6 @@ export const Newsletter = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Logique d'abonnement
   };
 
   return (
