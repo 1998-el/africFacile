@@ -1,0 +1,78 @@
+import { Link } from "react-router-dom";
+
+interface Slide {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const slides: Slide[] = [
+  {
+    title: "Produits Authentiques & Locaux",
+    description: "Découvrez des objets artisanaux, des vêtements traditionnels et bien plus.",
+    image: "/assets/images/afri_1.jpg",
+  },
+  {
+    title: "Services Fiables à Distance",
+    description: "Réservez des prestations vérifiées où que vous soyez, sans stress.",
+    image: "/assets/images/afri_1.jpg",
+  },
+  {
+    title: "Formations Certifiantes",
+    description: "Apprenez en ligne ou en présentiel avec les meilleurs formateurs panafricains.",
+    image: "/assets/images/afri_1.jpg",
+  },
+  {
+    title: "Immobilier Accessible",
+    description: "Trouvez terrains, maisons, studios au Cameroun et dans la région.",
+    image: "/assets/images/afri_2.jpg",
+  },
+  {
+    title: "Voyages inspirants",
+    description: "Explorez le monde avec nos offres sur mesure et nos agences partenaires.",
+    image: "/assets/images/afri_4.jpg",
+  },
+];
+=======
+
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+import afri1 from "../../../../../../assets/images/afri_1.jpg";
+import afri2 from "../../../../../../assets/images/afri_2.jpg";
+import afri3 from "../../../../../../assets/images/afri_3.jpg";
+import afri4 from "../../../../../../assets/images/afri_4.jpg";
+
+interface Slide {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const slides: Slide[] = [
+  {
+    title: "Produits Authentiques & Locaux",
+    description: "Découvrez des objets artisanaux, des vêtements traditionnels et bien plus.",
+    image: afri1,
+  },
+  {
+    title: "Services Fiables à Distance",
+    description: "Réservez des prestations vérifiées où que vous soyez, sans stress.",
+    image: afri1,
+  },
+  {
+    title: "Formations Certifiantes",
+    description: "Apprenez en ligne ou en présentiel avec les meilleurs formateurs panafricains.",
+    image: afri1,
+  },
+  {
+    title: "Immobilier Accessible",
+    description: "Trouvez terrains, maisons, studios au Cameroun et dans la région.",
+    image: afri2,
+  },
+  {
+    title: "Voyages inspirants",
+    description: "Explorez le monde avec nos offres sur mesure et nos agences partenaires.",
+    image: afri4,
+  },
+];
